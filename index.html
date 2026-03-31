@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="icon.png">
+    <meta charset="UTF-8">
+    <title>Spy Game Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div id="setup">
+            <h1>Шпион 🕵️‍♂️</h1>
+            <input type="number" id="playerCount" placeholder="Ойыншы саны" min="3" value="4">
+            <button onclick="startGame()">Ойынды бастау</button>
+        </div>
+
+        <div id="game" class="hidden">
+            <div id="player-num"></div>
+            <div class="card" id="mainCard" onclick="toggleCard()">
+                <div class="card-inner" id="cardInner">
+                    <div class="card-front">Көру үшін бас</div>
+                    <div class="card-back" id="wordBox">Сөз осында</div>
+                </div>
+            </div>
+            <p id="instruction">Келесі ойыншыға беріңіз</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
